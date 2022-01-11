@@ -1,0 +1,21 @@
+ion-card-title{
+    color:orangered;
+    font-size: 18px;
+}
+ion-grid, ion-col, .item-native, item-inner{padding-inline-start: 0;padding-inline-end: 0}
+h1{
+    color:orangered;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.sub_title{
+    font-size: 12px !important;
+    color: gray;
+}
+.activei{
+    --background: #ffefef;
+}
+.active{
+    color: mediumvioletred;
+    font-weight: 600;
+}

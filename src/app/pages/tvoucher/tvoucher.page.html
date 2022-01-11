@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Transport Vouchers</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="voData">
+  <ion-list>
+    <ion-item *ngFor="let h of voData">
+      <ion-label>
+        <h2>{{h.service_type}} x {{h.no_vehicle}}</h2>
+        <h2>City:{{h.city_code}}, Pax:{{h.pax}}</h2>
+        <p><strong>By:</strong> {{h.agent_name}}</p>
+      </ion-label>
+      <ion-icon name="eye-sharp" slot="end" (click)="openBrowser(h.id)"></ion-icon>
+      <ion-icon name="share-social-sharp" slot="end" (click)="shareSocial(h.id,h.service_type,h.tour_id)"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

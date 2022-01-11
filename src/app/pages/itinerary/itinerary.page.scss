@@ -1,0 +1,109 @@
+ion-text{position: relative;display: block;margin-bottom: 100px;}
+ion-text img{border-radius: 0 0 15px 15px;width: 100%;}
+.tour-heading{
+    position: absolute; bottom: -144px;left: 50%;right: 50%;transform: translate(-50%, -50%);width: 90%;
+    z-index: 9;margin: 0;box-shadow: 0 20px 75px rgba(0,0,0,.1);border-radius: 15px;
+    padding: 10px 25px 15px;
+}
+ion-text h2{
+    font-size: 18px;margin: 0 0 10px 0;padding: 0 0 7px 0;display: block;
+    border-bottom: 1px dotted orangered;color: orangered; text-transform: uppercase;
+}
+ion-text h4{
+    font-size: 14px;margin: 0 0 10px;padding: 0;
+}
+ion-text p{margin: 0;padding: 0;color: #666;}
+ion-text h4,
+ion-text p{
+    position: relative;padding-left: 26px;color: #999;
+}
+ion-text h4 i,
+ion-text p i {
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+ion-text h4 i svg,
+ion-text p i svg{
+    width: 16px;
+    fill: #999;
+}
+/*
+.q-links, .body-card{box-shadow: none;}
+.q-links{margin-left: 22px;margin-right: 22px;
+    padding: 15px 0 30px;
+    overflow-x: scroll;border-radius: 0;
+}
+.q-links ul{margin: 0;padding: 0;list-style: none;display: block;width: 450px;}
+.q-links ul li{display: inline-block;margin: 0 35px 0 0;}
+.q-links ul li a{
+    color: orangered;text-decoration: none;display: block;position: relative;
+    font-weight: bold;
+}
+*/
+
+      .swiper-slide {
+        display: block;
+      }
+      .swiper-slide img {
+        pointer-events: none;
+        border-radius: 0 0 15px 15px;
+      }
+
+
+
+.body-card{box-shadow: none;border-bottom: 1px dashed #999;margin-bottom: 15px;padding-bottom: 15px;}
+.day{
+    position: absolute;
+    left: 0px;
+    background: #286043;
+    padding: 5px 9px;
+    color: #FFF;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.day::after{
+    content: "";
+    padding: 5px;
+    display: inline-block;
+    background: #286043;
+    position: absolute;
+    right: -4px;
+    top: 9px;
+    transform: rotate(45deg);
+}
+ion-card-title{
+    color:orangered;
+    font-size: 18px;
+}
+ion-card-content{
+    text-align: justify;
+}
+ion-back-button {
+    display: block;
+ }
+ .heading{
+     padding-left: 85px;
+    padding-top: 4px;
+    display: flex;
+
+ }
+ button{
+     background: #eee;
+     border-radius: 4px;
+     margin-top: 5px;
+     padding: 4px 10px 6px;
+     border: 1px dotted #999;
+     text-transform: capitalize;
+ }
+ .active{
+    --background:#ffe7f7;
+ }
+ .sub_title{
+     display: inline-block;
+     margin-top: 10px;
+     font-weight: 600;
+ }

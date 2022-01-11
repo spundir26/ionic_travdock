@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <br>
+  <br>
+  <ion-list>
+    <ion-items>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input type="text" name="username" [(ngModel)]="postData.username"></ion-input>
+    </ion-items>
+
+    <ion-items>
+      <ion-label position="stacked">Password </ion-label>
+      <ion-icon [name]="passwordIcon" color="grey" item-end (click)="hideShowPassword()"></ion-icon>
+      <ion-input [type]="passwordType" name="password" [(ngModel)]="postData.password"></ion-input>
+      
+    </ion-items>
+    <ion-button shape="round" color="warning" expand="block" (click)="loginAction()">Sign in</ion-button>
+  </ion-list>
+          
+</ion-content>

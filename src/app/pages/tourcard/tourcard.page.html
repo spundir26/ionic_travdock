@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tour Card</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card *ngIf="tourData">
+    <ion-card-header>
+      <ion-card-subtitle><strong>{{tourData.nights+1}} Days - {{tourData.nights}} Nights</strong></ion-card-subtitle>
+      <ion-card-title>{{tourData.tour_name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+           Guest Name<br> <strong>{{tourData.tour_name}}</strong>
+          </ion-col>
+          <ion-col>
+            Email<br><strong>{{tourData.email}}</strong> 
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           Arrival Date<br> <strong>{{tourData.arrival_date}}</strong>
+          </ion-col>
+          <ion-col>
+            Departure Date<br><strong>{{tourData.departure_date}}</strong> 
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           Arrival City<br> <strong>{{tourData.ar_city}}</strong>
+          </ion-col>
+          <ion-col>
+            Departure City<br><strong>{{tourData.dp_city}}</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           Agent Name<br> <strong>{{tourData.agent_name}}</strong>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="tourData">
+        <ion-card-content>
+        <h1>Hotel Details</h1>
+        <ion-list>
+          <ion-item *ngFor="let h of tourData.hiti" class="ion-no-padding">
+            <ion-label>
+              <h3>{{h.hotel_name}}, <span class="sub_title">{{h.city_name}}</span></h3>
+              <p>{{h.check_in}} - {{h.check_out}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="tourData">
+        <ion-card-content>
+        <h1>Daywise Itinerary</h1>
+        <ion-list>
+          <ion-item class="ion-no-padding" *ngFor="let it of tourData.citi" [ngClass]="{activei:it.active}">
+            <ion-label>
+              <h3>Day:{{it.day}}-{{it.city_name}} <span class="sub_title">({{it.heading}})</span></h3>
+              <p [ngClass]="{active:it.active}">{{it.dw}}, {{it.date}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <br>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

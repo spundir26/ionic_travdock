@@ -1,0 +1,25 @@
+.logout{
+    margin: 15px 0 0 15px;
+    font-size: large;
+}
+ion-title{
+    font-size: 16px;
+    padding-left: 15px;
+}
+.sub_item{
+    padding-left: 20px;
+    font-size: small;
+}
+ion-toolbar, ion-content, ion-item{
+    --background: #286043;cursor: pointer;
+}
+ion-list{
+    background: #286043;
+}
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h{
+    color: #fff;
+}
+ion-icon{
+    color: #ffb400;
+    margin-inline-end: 14px;
+}

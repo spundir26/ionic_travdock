@@ -1,0 +1,30 @@
+<ion-app> 
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+        <ion-toolbar>
+          <ion-title>Mneu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>Inbox</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="paper-plane" slot="start"></ion-icon>
+          <ion-label>Outbox</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="heart" slot="start"></ion-icon>
+          <ion-label>Messages</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="archieve" slot="start"></ion-icon>
+          <ion-label>Settings</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,28 @@
+ion-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+}
+.main-toolbar{
+    --background: #286043;
+    color: #fff;
+}
+ion-tab-button{
+    --background:#286043;
+    --color:#fff;
+    --color-focused: #ffb400;
+    --ripple-color:var(--color-focused)
+}
+ion-label{
+    --color:#f00 !important;
+}
+ion-tab-button:hover{--color: #ffb400;}
+ion-grid{
+    title{ font-weight: 600;}
+    padding: 20px 0 0 15px;
+}
+.weight{
+    font-weight: 600;
+}

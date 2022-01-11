@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Support</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid>
+
+    <ion-row *ngFor="let ms of messages" padding>
+
+        <ion-col size="8" *ngIf="currentUser !== ms.user" class="message other-message">
+          <b>{{ms.user}}</b><br>
+          <span>{{ms.msg}}</span>
+          <div class="time" text-right>
+            {{ms.created_at | date:'dd/MM/yyyy, h:mm a'}}
+          </div>
+        </ion-col>
+
+        <ion-col offset="4" size="8" *ngIf="currentUser === ms.user" class="message my-message">
+          <b>You</b><br>
+          <span>{{ms.msg}}</span>
+          <div class="time" text-right>
+            {{ms.created_at | date:'dd/MM/yyyy, h:mm a'}}
+          </div>
+        </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-row align-items-center no-padding>
+      <ion-col size="10">
+        <textarea autosize [maxRows]="4" [(ngModel)]="newMsg" class="message-input"></textarea>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button class="msg-button" fill="clear" color="primary" [disabled]="newMsg ===''" (click)="sendMessage()">
+          <ion-icon name="send-sharp"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

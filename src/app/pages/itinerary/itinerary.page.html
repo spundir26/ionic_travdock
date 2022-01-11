@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tour Itinerary</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+    
+
+<ion-content fullscreen *ngIf="iti">
+  <ion-slides>
+          <ion-slide>
+              <img src="{{itiData.pkg_image}}" />
+          </ion-slide>
+          <ion-slide>
+            <img src="{{itiData.pkg_image}}" />
+          </ion-slide>
+
+          <ion-slide>
+            <img src="{{itiData.pkg_image}}" />
+          </ion-slide>
+          <ion-slide>
+            <img src="{{itiData.pkg_image}}" />
+          </ion-slide>
+        </ion-slides>
+
+  <ion-text color="primary">
+    
+    <ion-card class="tour-heading">
+    <h2>{{itiData.name}}</h2>
+    <h4><i><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+ stroke="none">
+<path d="M1155 5102 c-50 -23 -91 -70 -105 -120 -5 -20 -10 -83 -10 -138 l0
+-102 -197 -4 c-222 -5 -279 -18 -403 -85 -100 -55 -217 -179 -269 -284 -83
+-169 -76 7 -76 -1999 0 -2003 -6 -1830 75 -1996 74 -152 218 -277 389 -338
+l86 -31 1915 0 1915 0 80 28 c225 79 391 258 452 487 17 61 18 179 18 1850 0
+2007 7 1829 -77 2000 -59 120 -178 239 -298 297 -117 58 -203 73 -405 73
+l-165 0 0 103 c0 121 -11 166 -51 212 -87 98 -252 78 -309 -39 -17 -35 -20
+-62 -20 -159 l0 -117 -1139 0 -1139 0 -4 128 c-3 116 -5 132 -27 164 -55 79
+-153 109 -236 70z m-113 -859 c4 -137 20 -179 80 -223 73 -53 166 -48 235 13
+53 47 63 79 63 212 l0 115 1140 0 1140 0 0 -115 c0 -133 10 -165 63 -212 71
+-62 168 -65 243 -8 53 40 68 85 72 218 l4 117 159 0 c135 0 166 -3 213 -20 69
+-26 130 -85 164 -158 l27 -57 3 -307 4 -308 -2092 0 -2092 0 4 308 c3 268 6
+312 21 347 28 64 66 111 109 140 72 48 102 54 274 54 l162 1 4 -117z m3606
+-2370 l-3 -1258 -26 -55 c-31 -66 -85 -121 -148 -152 l-46 -23 -1865 0 -1865
+0 -46 23 c-64 31 -117 85 -148 151 l-26 56 -3 1258 -2 1257 2090 0 2090 0 -2
+-1257z"/>
+</g>
+</svg></i><span *ngIf="itiData.days">{{itiData.days}} Days - {{itiData.days-1}} Nights</span></h4>
+    <p><i><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+ stroke="none">
+<path d="M2360 5109 c-202 -23 -396 -80 -585 -173 -376 -185 -656 -466 -835
+-839 -326 -676 -210 -1403 383 -2397 169 -283 326 -517 722 -1075 132 -187
+279 -396 327 -465 90 -131 124 -160 188 -160 64 0 98 29 188 160 48 69 195
+278 327 465 388 546 559 801 724 1079 533 897 674 1550 470 2181 -38 117 -141
+326 -218 440 -368 550 -1033 858 -1691 784z m495 -319 c681 -143 1170 -714
+1202 -1405 16 -333 -84 -701 -317 -1165 -183 -365 -385 -682 -920 -1438 -140
+-199 -257 -361 -260 -361 -3 0 -31 37 -62 82 -31 45 -154 219 -273 387 -236
+332 -471 679 -582 860 -415 676 -601 1199 -580 1635 26 547 334 1023 827 1274
+150 77 311 126 490 151 106 15 361 4 475 -20z"/>
+<path d="M2380 4201 c-339 -74 -601 -323 -691 -656 -18 -65 -22 -107 -22 -225
+0 -118 4 -160 22 -225 88 -324 340 -570 668 -652 103 -26 323 -23 428 6 317
+85 560 329 646 646 18 65 22 107 22 225 0 118 -4 160 -22 225 -86 318 -332
+564 -646 646 -116 30 -294 35 -405 10z m324 -301 c113 -29 190 -73 276 -160
+87 -86 131 -163 160 -276 36 -141 17 -295 -52 -427 -44 -82 -165 -203 -245
+-245 -133 -70 -286 -88 -427 -52 -111 28 -189 73 -276 160 -87 86 -131 162
+-160 276 -36 141 -18 294 52 427 42 80 163 201 245 245 132 70 286 88 427 52z"/>
+</g>
+</svg></i>Bengaluru - Mysore - Pune - Aurangabad - Akola - Chikhaldara</p>
+  </ion-card>
+  </ion-text>
+  <!-- <ion-card class="q-links">
+    <ul>
+      <li><a href="#">Highlights</a></li>
+      <li><a href="#">Details</a></li>
+      <li><a href="#">Inclusions</a></li>
+      <li><a href="#">Price</a></li>
+      <li><a href="#">T &amp; C</a></li>
+    </ul>
+  </ion-card>
+-->
+  <ion-card class="body-card" *ngIf="itiData.highlights">
+    <ion-card-header>
+      <ion-card-title><strong>Tour Highlights</strong></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     <p *ngFor="let h of itiData.highlights">{{h}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="body-card" *ngFor="let u of iti" [ngClass]={active:u.active}>
+    <ion-card-header>
+      <ion-card-subtitle><strong>{{u.dw}}, {{u.date}}</strong></ion-card-subtitle>
+      <ion-card-title><strong class="day">Day:{{u.day}}</strong><span class="heading">{{u.city_name}}</span></ion-card-title>
+      <span class="sub_title">{{u.heading}}</span>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="u.description.length <= limit">{{u.description}}</div>
+      <div *ngIf="u.truncating && u.description.length > limit">
+        {{u.description | truncate : limit}}
+        <button ion-button (click)="u.truncating = false" fill="outline">show more</button>
+      </div>
+      <div *ngIf="!u.truncating && u.description.length > limit">
+        {{u.description}}
+        <button ion-button (click)="u.truncating = true">show less</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
